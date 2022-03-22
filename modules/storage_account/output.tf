@@ -38,6 +38,11 @@ output "queues" {
   value       = module.queue
 }
 
+output "tables" {
+  description = "The tables output objects as created by the tables submodule."
+  value       = module.table
+}
+
 output "data_lake_filesystems" {
   description = "The data lake filesystem output objects as created by the data lake filesystem submodule."
   value       = module.data_lake_filesystem

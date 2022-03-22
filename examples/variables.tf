@@ -582,6 +582,9 @@ variable "servicebus_queues" {
 variable "storage_account_queues" {
   default = {}
 }
+variable "storage_account_tables" {
+  default = {}
+}
 variable "storage_account_blobs" {
   default = {}
 }

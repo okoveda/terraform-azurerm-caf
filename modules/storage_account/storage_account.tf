@@ -210,6 +210,14 @@ module "queue" {
   settings             = each.value
 }
 
+module "table" {
+  source   = "./table"
+  for_each = try(var.storage_account.tables, {})
+
+  storage_account_name = azurerm_storage_account.stg.name
+  settings             = each.value
+}
+
 module "container" {
   source   = "./container"
   for_each = try(var.storage_account.containers, {})
